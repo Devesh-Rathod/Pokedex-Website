@@ -1,0 +1,14 @@
+#pokedex-name-search {
+    width: 600px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top : 1rem;
+    
+}
+
+.search-wrapper {
+    margin: 0 auto;
+    
+    
+}
