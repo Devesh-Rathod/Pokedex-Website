@@ -9,6 +9,7 @@ function Search({updateSearchTerm}) {
             type="text" 
             id="pokedex-name-search" 
             placeholder="Search for a Pokémon..." 
+            style={{ padding: '0.5rem', fontSize: '1rem', borderRadius: '8px', border: '1px solid #ccc' }}
             onChange={(e) => updateSearchTerm(e.target.value)}
             />
         </div>

@@ -3,7 +3,8 @@ import axios from 'axios';
 import './PokemonList.css';
 import Pokemon from '../Pokemon/Pokemon';
 
-function PokemonList() {
+function PokemonList({ searchTerm = '' }) {
+
     const [pokemonListState, setPokemonListState] = useState({
         pokemonList: [],
         loading: true,
@@ -13,7 +14,9 @@ function PokemonList() {
     });
 
     const { pokemonList, loading, pokedexUrl, nextUrl, prevUrl } = pokemonListState;
-
+    const filteredList = pokemonList.filter(pokemon =>
+        pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
     async function downloadPokemon() {
         setPokemonListState(prev => ({ ...prev, loading: true }));
         const response = await axios.get(pokedexUrl);
@@ -53,10 +56,17 @@ function PokemonList() {
         <>
             <div className='pokemonList-wrapper'>
                 <div className="pokemon-wrapper">
-                    {
-                        loading ? 'Loading...' :
-                            pokemonList.map((p) => <Pokemon key={p.id} name={p.name} image={p.image} id={p.id} />)
-                    }
+                    {loading ? (
+                        'Loading...'
+                    ) : filteredList.length === 0 ? (
+                        <div style={{ fontSize: '1.5rem', color: '#ff4141', marginTop: '2rem' }}>
+                            No Pokémon found.
+                        </div>
+                    ) : (
+                        filteredList.map((p) => (
+                            <Pokemon key={p.id} name={p.name} image={p.image} id={p.id} />
+                        ))
+                    )}
                 </div>
             </div>
             <br />

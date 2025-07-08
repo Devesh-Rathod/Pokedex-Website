@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+    gap: 1rem; /* This adds space between the buttons */
 }
 button {
     padding: 1rem;
