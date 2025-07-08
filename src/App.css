@@ -1,0 +1,31 @@
+#pokedex-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 1rem auto;
+    color: #333;
+    letter-spacing: 2px;
+     transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+#pokedex-heading:hover {
+    color: linear-gradient(135deg, #ff4141, #ff7676);
+    text-shadow: 0 2px 8px rgba(255, 65, 65, 0.3);
+    transform: scale(1.05);
+    letter-spacing: 4px;
+}
+.pokemon-details-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+*{
+    background-color: beige;
+}
+a:visited {
+    color: #ff4141;
+    text-decoration: none;
+}

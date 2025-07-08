@@ -1,7 +1,9 @@
 import './Pokemon.css';
-function Pokemon({ name, image, key }) {
+import { Link } from 'react-router-dom';
+function Pokemon({ name, image, id }) {
     return (
         <div className="pokemon">
+        <Link to={`/pokemon/${id}`} >
             <div>
                 <img
                     className='pokemon-image'
@@ -9,7 +11,8 @@ function Pokemon({ name, image, key }) {
                     
             </div>
             <div className="pokemon-name">{name}</div>
-            <div>{key}</div>
+            
+            </Link>
         </div>
     );
 }
