@@ -4,5 +4,5 @@ import ghPages from 'vite-plugin-gh-pages'
 
 export default defineConfig({
   plugins: [react(), ghPages()],
-  base: '/YOUR_REPO_NAME/', // Replace with your repo name
+  base: '/Pokedex-Website/', // <-- use your repo name here
 })
