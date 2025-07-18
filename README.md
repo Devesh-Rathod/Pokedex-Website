@@ -60,34 +60,6 @@ This project uses the PokéAPI to fetch Pokémon data. Key endpoints include:
 GET /api/v2/pokemon/{name or id}: Retrieve details for a specific Pokémon.
 GET /api/v2/pokemon?limit=20&offset=0: Fetch a list of Pokémon with pagination.
 
-Example API call in React:
-import { useState, useEffect } from 'react';
-
-function Pokemon() {
-  const [pokemon, setPokemon] = useState(null);
-
-  useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
-      .then(response => response.json())
-      .then(data => setPokemon(data));
-  }, []);
-
-  return pokemon ? <div>{pokemon.name}</div> : <div>Loading...</div>;
-}
-
-Folder Structure
-pokedex-website/
-├── public/               # Static assets (e.g., favicon, images)
-├── src/                  # React source files
-│   ├── assets/           # Images, fonts, or other assets
-│   ├── components/       # Reusable React components
-│   ├── App.jsx           # Main App component
-│   ├── main.jsx          # Entry point for React
-│   └── index.css         # Global styles
-├── .gitignore            # Files/folders to ignore in Git
-├── package.json          # Project dependencies and scripts
-├── vite.config.js        # Vite configuration
-└── README.md             # This file
 
 Building for Production
 To create an optimized production build:
@@ -116,3 +88,5 @@ Create a pull request on GitHub.
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+For queries contact deveshrathod15@gmail.com.
